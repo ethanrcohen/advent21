@@ -1,0 +1,47 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           advent21
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/ethanrcohen/advent21#readme>
+homepage:       https://github.com/ethanrcohen/advent21#readme
+bug-reports:    https://github.com/ethanrcohen/advent21/issues
+author:         Ethan Cohen
+maintainer:     ecohen56@gmail.com
+copyright:      2021 Ethan Cohen
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/ethanrcohen/advent21
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_advent21
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable day1
+  main-is: Main.hs
+  other-modules:
+      Paths_advent21
+  hs-source-dirs:
+      src/01
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      advent21
+    , base >=4.7 && <5
+  default-language: Haskell2010
