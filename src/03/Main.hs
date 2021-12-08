@@ -13,7 +13,7 @@ part1 xs = let counts = foldl part1Fold (repeat 0) xs
            in epsilon * gamma
 
 part1Fold :: [Int] -> [Char] -> [Int]
-part1Fold xs ys = zipWith (\x y -> x + digitToInt y) xs ys 
+part1Fold = zipWith (\x y -> x + digitToInt y) 
 
 readInt :: String -> Int
 readInt = read
@@ -45,7 +45,6 @@ part2 :: [[Char]] -> Int
 part2 xs = let oxygenVal = binaryToDecimal . readInt $ oxygen xs 0
                co2Val = binaryToDecimal . readInt $ co2 xs 0 
              in oxygenVal * co2Val
-
 
 main = do 
         input <- readFile "/Users/ecohen/Developer/advent21/src/03/input.txt"
